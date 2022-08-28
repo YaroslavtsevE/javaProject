@@ -15,6 +15,11 @@ public class LoopForHome {
             }
         }
         }
+//    public static int getValue(int a, int b) {
+//        for (int a = 100; a >= 1; a / b)
+//        return (int) a / b;
+//    }
+
     public static int getValue(int a, int b) {
         return (int) a / b;
     }
