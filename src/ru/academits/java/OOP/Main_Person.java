@@ -16,7 +16,15 @@ public class Main_Person {
         System.out.print("Введите фмилию: ");
         String familyName = scanner.nextLine();
 
-        Person person = new Person(name, middleName, familyName);
+        System.out.print("Введите ваш возраст: ");
+        int age = scanner.nextInt();
+
+        Person person = new Person(name, middleName, familyName, age);
+
+        person.setName("Petr");
+        person.setFamilyName("Popov");
+        person.setMiddleName("Petrovich");
+//        person.setAge(18);
 
         System.out.println("Объект класса Person был создан: " + person);
     }
