@@ -12,7 +12,5 @@ public class LoopWhile {
         }
 
         System.out.println("Сумма = " + sum);
-
-
     }
 }

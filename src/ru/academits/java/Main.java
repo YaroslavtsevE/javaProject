@@ -21,7 +21,5 @@ public class Main {
 
 
         System.out.println("длина строки s2 = " + s2.length());
-
-
     }
 }
