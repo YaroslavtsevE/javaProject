@@ -1,5 +1,7 @@
 //package ru.academits.java.OOP;
 //
+//import java.time.LocalDate;
+//
 //public class Person {
 //    private String name;
 //    private String middleName;
@@ -48,30 +50,28 @@
 //    }
 //
 //    public void setAge(int age) {
-//        if (!(age == 0))
-//        if (age <=){
+//        if (!(age == 0)) {
 //            this.age = age;
 //        }
 //    }
+//
+//
+//    public static int getBirthYear(int age) {
+//        return (int) (getYear() - age);
+//        }
+//
+//
+//        @Override
+//        public String toString () {
+//            return "{" + familyName + " " + name + " " + middleName + " " + age + "}";
+//        }
 //}
+//class Current_Year {
+//    public static void main(String args[]) {
 //
-//    public class YearFunction {
-//        public static void main(String[] args) {
-//            int a = 2022;
-//            int b = 11;
+//        LocalDate current_date = LocalDate.now();
 //
-//            int year = getYear(2022, 19);
-//            System.out.println("Год рождения: " + getYear(2022, 17));
-//        }
-//        public static int getYear(int a, int age) { return (int) (a - age);
-//        }
+//        int current_Year = current_date.getYear();
+//        System.out.println("Current year: "+current_Year);
 //    }
-//
-//
-//    @Override
-//    public String toString() {
-//        return "{" + familyName + " " + name + " " + middleName + " " + age + "}";
-//    }
-//
-//
 //}
