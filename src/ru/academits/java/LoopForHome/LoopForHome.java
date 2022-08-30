@@ -1,20 +1,26 @@
 package ru.academits.java.LoopForHome;
 
 public class LoopForHome {
+{
     public static void main(String[] args) {
+        int a = 100;
+        int b = 4;
         boolean c = true;
-        int a = 4;
-        int isDivisibleByFour = getIsDivisibleByFour();
-
-
+        boolean isDivisibleByFour = getIsDivisibleByFour(100);
         for (int i = 100; i >= 1; i--) {
-            if getIsDivisibleByFour == c {
-                System.out.print(i + "_");
+            if (getIsDivisibleByFour(i) == c) {
+            System.out.print(i + " ");
             }
         }
-    public static int isDivisibleByFour(int a, int i)
+}
+
+        public static boolean getIsDivisibleByFour(int a)
 
     {
-        return (int) (i / a);
+        if (a % 4 == 0) {
+        return (boolean) (true);
+        }
+        else { return (boolean) (false);}
     }
+}
 }
