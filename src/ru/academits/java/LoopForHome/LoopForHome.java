@@ -4,7 +4,6 @@ public class LoopForHome {
 {
     public static void main(String[] args) {
         int a = 100;
-        int b = 4;
         boolean c = true;
         boolean isDivisibleByFour = getIsDivisibleByFour(100);
         for (int i = 100; i >= 1; i--) {
