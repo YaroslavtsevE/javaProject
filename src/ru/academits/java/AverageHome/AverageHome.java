@@ -14,7 +14,10 @@ public class AverageHome {
         int b = scanner.nextInt();
 
         int i = a;
+        int j = a;
+        int k = a + 1;
         int sum = 0;
+        int evensum = 0;
 
         if (IsTrue(a, b)) {
 
@@ -22,17 +25,30 @@ public class AverageHome {
                 sum = sum + i;
                 ++i;
             }
+
+            if (IsEven(a)) {
+                while (j <= b) {
+                    evensum = evensum + j;
+                    j = j + 2;
+                }
+            }
+            if (!(IsEven(a))) {
+                while (k <= b) {
+                    evensum = evensum + k;
+                    k = k + 2;
+                }
+            }
+
             double average = sum / getCountFor(a, b);
+            double evenaverage = evensum / getEvenCountFor(a, b);
             System.out.println("Average = " + average);
+            System.out.println("EvenAverage = " + evenaverage);
         } else {
             System.out.println("ERROR");
         }
     }
 
     public static double getCountFor(int a, int b) {
-        if (a > b) {
-            return (double) ((a - b) + 1);
-        }
         return (double) ((b - a) + 1);
     }
 
@@ -50,18 +66,15 @@ public class AverageHome {
         return false;
     }
 
-//    public static int getEvenSum(int a) {
-//        for (int i = a; i <= b; i++) {
-//            if (IsEven(i)) {
-//                while (i <= b) {
-//                    sum = sum + i;
-//                    ++i;
-//                }
-//                double even = sum / getCountFor(a, b);
-//                System.out.println("Average = " + average);
-//
-//            }
-//        }
-//    }
+    public static double getEvenCountFor(int a, int b) {
+        if (!(IsEven(a)) && !(IsEven(b))) {
+
+            return (double) ((b - a) / 2);
+        }
+        if (IsEven(a) && !(IsEven(b))) {
+            return (double) ((b - a) + 1) / 2;
+        }
+        return (double) ((b - a + 2) / 2);
+    }
 }
 
