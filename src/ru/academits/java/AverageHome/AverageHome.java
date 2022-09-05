@@ -16,23 +16,23 @@ public class AverageHome {
         int i = a;
         int j = a;
         int k = a + 1;
-        int sum = 0;
-        int evensum = 0;
+        double sum = 0.0;
+        double evensum = 0.0;
 
-        if (IsTrue(a, b)) {
+        if (a < b) {
 
             while (i <= b) {
                 sum = sum + i;
                 ++i;
             }
 
-            if (IsEven(a)) {
+            if (a % 2 == 0) {
                 while (j <= b) {
                     evensum = evensum + j;
                     j = j + 2;
                 }
             }
-            if (!(IsEven(a))) {
+            if (a % 2 != 0) {
                 while (k <= b) {
                     evensum = evensum + k;
                     k = k + 2;
@@ -52,26 +52,12 @@ public class AverageHome {
         return (double) ((b - a) + 1);
     }
 
-    public static boolean IsTrue(int a, int b) {
-        if ((a < b) && (a > 1) && (b <= 17)) {
-            return true;
-        }
-        return false;
-    }
-
-    public static boolean IsEven(int a) {
-        if (a % 2 == 0) {
-            return true;
-        }
-        return false;
-    }
-
     public static double getEvenCountFor(int a, int b) {
-        if (!(IsEven(a)) && !(IsEven(b))) {
+        if ((a % 2 != 0) && (b % 2 != 0)) {
 
             return (double) ((b - a) / 2);
         }
-        if (IsEven(a) && !(IsEven(b))) {
+        if ((a % 2 == 0) && (b % 2 != 0)) {
             return (double) ((b - a) + 1) / 2;
         }
         return (double) ((b - a + 2) / 2);
