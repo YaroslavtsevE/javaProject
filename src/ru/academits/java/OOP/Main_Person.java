@@ -28,7 +28,7 @@ public class Main_Person {
         person.setAge(29);
 
         System.out.println("Объект класса Person был создан: " + person);
+        System.out.println("Год рождения: " + person.getBirthYear());
         person.printName();
-        person.yearOfBirth();
     }
 }

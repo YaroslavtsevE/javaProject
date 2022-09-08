@@ -62,7 +62,7 @@ public class Person {
         System.out.println("Name = " + name);
     }
 
-    public int getNowYear() {
+    public int getBirthYear() {
         //Getting the current date value of the system
         LocalDate current_date = LocalDate.now();
 //        System.out.println("Current date: "+current_date);
@@ -70,14 +70,7 @@ public class Person {
         //getting the current year from the current_date
         int current_Year = current_date.getYear();
 //        System.out.println("Current year: "+current_Year);
-        return current_Year;
+        int birth_Year = current_Year - getAge();
+        return birth_Year;
     }
-    public int getBirth(int age) {
-        return (int) (getNowYear() - age);
-    }
-
-    public void yearOfBirth() {
-        System.out.print("Год рождения = " + getBirth(age));
-    }
-
 }
