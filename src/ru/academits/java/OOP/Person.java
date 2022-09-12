@@ -63,14 +63,8 @@ public class Person {
     }
 
     public int getBirthYear() {
-        //Getting the current date value of the system
         LocalDate current_date = LocalDate.now();
-//        System.out.println("Current date: "+current_date);
 
-        //getting the current year from the current_date
-        int current_Year = current_date.getYear();
-//        System.out.println("Current year: "+current_Year);
-        int birth_Year = current_Year - getAge();
-        return birth_Year;
+        return (current_date.getYear() - getAge());
     }
 }
